@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34622.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lab15", "Lab15\Lab15.csproj", "{041D6E45-F954-4EEA-AED6-EDFC5C87F03A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{041D6E45-F954-4EEA-AED6-EDFC5C87F03A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{041D6E45-F954-4EEA-AED6-EDFC5C87F03A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{041D6E45-F954-4EEA-AED6-EDFC5C87F03A}.Debug|x64.ActiveCfg = Debug|x64
+		{041D6E45-F954-4EEA-AED6-EDFC5C87F03A}.Debug|x64.Build.0 = Debug|x64
+		{041D6E45-F954-4EEA-AED6-EDFC5C87F03A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{041D6E45-F954-4EEA-AED6-EDFC5C87F03A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{041D6E45-F954-4EEA-AED6-EDFC5C87F03A}.Release|x64.ActiveCfg = Release|x64
+		{041D6E45-F954-4EEA-AED6-EDFC5C87F03A}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {79037BEB-CCE8-48FF-8A58-C28251A528BE}
+	EndGlobalSection
+EndGlobal
