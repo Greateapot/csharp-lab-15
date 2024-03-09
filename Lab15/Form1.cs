@@ -16,10 +16,33 @@ namespace Lab15
         private readonly BindingSource comboBox1BindingSource = [];
         private readonly BindingSource comboBox2BindingSource = [];
 
-
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void OnRunnerMeetsBarrier(RunnerState state)
+        {
+            lock (richTextBox1)
+            {
+                richTextBox1.AppendText($"{state.Runner.Name} встретил барьер\n");
+            }
+        }
+
+        private void OnRunnerMoved(RunnerState state)
+        {
+            lock (richTextBox1)
+            {
+                richTextBox1.AppendText($"{state.Runner.Name} сдвинулся\n");
+            }
+        }
+
+        private void OnRunnerFinished(RunnerState state)
+        {
+            lock (richTextBox1)
+            {
+                richTextBox1.AppendText($"{state.Runner.Name} финишировал на позиции {state.Position}\n");
+            }
         }
 
         private void Form1_Load(object? sender, EventArgs e)
@@ -28,11 +51,12 @@ namespace Lab15
 
             comboBox1BindingSource.DataSource = runners;
             comboBox1.DataSource = comboBox1BindingSource;
-            // comboBox1.DisplayMember = "Name";
 
             comboBox2BindingSource.DataSource = threadPriorities;
             comboBox2.DataSource = comboBox2BindingSource;
-            // comboBox2.DisplayMember = "Name";
+
+            numericUpDown2.Value = 10;
+            checkBox3.Checked = true;
         }
 
         private void NumericUpDown1_ValueChanged(object? sender, EventArgs e)
@@ -40,7 +64,7 @@ namespace Lab15
             if (numericUpDown1.Value > runners.Count)
             {
                 for (var i = runners.Count; i < numericUpDown1.Value; i++)
-                    runners.Add(new Runner($"Runner #{i + 1}"));
+                    runners.Add(new Runner($"Бегун №{i + 1}"));
             }
             else if (numericUpDown1.Value < runners.Count)
             {
@@ -61,42 +85,33 @@ namespace Lab15
                 = threadPriorities.ElementAt(comboBox2.SelectedIndex);
         }
 
-        private void OnRunnerMeetsBarrier(RunnerState state)
+        private void RichTextBox1_TextChanged(object sender, EventArgs e)
         {
-            lock (richTextBox1)
-            {
-                richTextBox1.AppendText($"{state.Runner.Name} meets barrier\n");
-            }
-        }
-
-        private void OnRunnerMoved(RunnerState state)
-        {
-            lock (richTextBox1)
-            {
-                richTextBox1.AppendText($"{state.Runner.Name} moved\n");
-            }
-        }
-
-        private void OnRunnerFinished(RunnerState state)
-        {
-            lock (richTextBox1)
-            {
-                richTextBox1.AppendText($"{state.Runner.Name} finished on position {state.Position}\n");
-            }
+            richTextBox1.SelectionStart = richTextBox1.Text.Length;
+            richTextBox1.ScrollToCaret();
         }
 
         private void Button1_Click(object sender, EventArgs e)
         {
             button1.Enabled = false;
+            checkBox1.Enabled = false;
+            checkBox2.Enabled = false;
+            checkBox3.Enabled = false;
             richTextBox1.Clear();
-            var process = new Process([.. runners], 20);
-            process.OnRunnerFinished += OnRunnerFinished;
-            process.OnRunnerMoved += OnRunnerMoved;
-            process.OnRunnerMeetsBarrier += OnRunnerMeetsBarrier;
+
+            var process = new Process([.. runners], (int)numericUpDown2.Value);
+            if (checkBox1.Checked)
+                process.OnRunnerMoved += OnRunnerMoved;
+            if (checkBox2.Checked)
+                process.OnRunnerMeetsBarrier += OnRunnerMeetsBarrier;
+            if (checkBox3.Checked)
+                process.OnRunnerFinished += OnRunnerFinished;
             process.Start();
+
             button1.Enabled = true;
+            checkBox1.Enabled = true;
+            checkBox2.Enabled = true;
+            checkBox3.Enabled = true;
         }
-
-
     }
 }

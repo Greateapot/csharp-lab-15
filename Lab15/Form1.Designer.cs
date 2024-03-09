@@ -37,7 +37,13 @@
             comboBox2 = new ComboBox();
             richTextBox1 = new RichTextBox();
             button1 = new Button();
+            numericUpDown2 = new NumericUpDown();
+            label4 = new Label();
+            checkBox1 = new CheckBox();
+            checkBox2 = new CheckBox();
+            checkBox3 = new CheckBox();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown2).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -84,6 +90,7 @@
             richTextBox1.DetectUrls = false;
             richTextBox1.Name = "richTextBox1";
             richTextBox1.ReadOnly = true;
+            richTextBox1.TextChanged += RichTextBox1_TextChanged;
             // 
             // button1
             // 
@@ -92,10 +99,45 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += Button1_Click;
             // 
+            // numericUpDown2
+            // 
+            resources.ApplyResources(numericUpDown2, "numericUpDown2");
+            numericUpDown2.Minimum = new decimal(new int[] { 3, 0, 0, 0 });
+            numericUpDown2.Name = "numericUpDown2";
+            numericUpDown2.Value = new decimal(new int[] { 3, 0, 0, 0 });
+            // 
+            // label4
+            // 
+            resources.ApplyResources(label4, "label4");
+            label4.Name = "label4";
+            // 
+            // checkBox1
+            // 
+            resources.ApplyResources(checkBox1, "checkBox1");
+            checkBox1.Name = "checkBox1";
+            checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            resources.ApplyResources(checkBox2, "checkBox2");
+            checkBox2.Name = "checkBox2";
+            checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // checkBox3
+            // 
+            resources.ApplyResources(checkBox3, "checkBox3");
+            checkBox3.Name = "checkBox3";
+            checkBox3.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(checkBox3);
+            Controls.Add(checkBox2);
+            Controls.Add(checkBox1);
+            Controls.Add(numericUpDown2);
+            Controls.Add(label4);
             Controls.Add(button1);
             Controls.Add(richTextBox1);
             Controls.Add(comboBox2);
@@ -107,6 +149,7 @@
             Name = "Form1";
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -121,5 +164,10 @@
         private ComboBox comboBox2;
         private RichTextBox richTextBox1;
         private Button button1;
+        private NumericUpDown numericUpDown2;
+        private Label label4;
+        private CheckBox checkBox1;
+        private CheckBox checkBox2;
+        private CheckBox checkBox3;
     }
 }

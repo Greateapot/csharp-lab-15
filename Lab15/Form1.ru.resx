@@ -135,7 +135,7 @@
     <value>62, 23</value>
   </data>
   <data name="comboBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>129, 45</value>
+    <value>129, 80</value>
   </data>
   <data name="comboBox1.Size" type="System.Drawing.Size, System.Drawing">
     <value>125, 23</value>
@@ -147,7 +147,7 @@
     <value>Segoe UI, 10pt</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 46</value>
+    <value>12, 81</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>47, 19</value>
@@ -162,7 +162,7 @@
     <value>Segoe UI, 10pt</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 75</value>
+    <value>12, 110</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>81, 19</value>
@@ -171,7 +171,7 @@
     <value>Приоритет:</value>
   </data>
   <data name="comboBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>129, 74</value>
+    <value>129, 109</value>
   </data>
   <data name="comboBox2.Size" type="System.Drawing.Size, System.Drawing">
     <value>125, 23</value>
@@ -191,6 +191,51 @@
   </data>
   <data name="button1.Text" xml:space="preserve">
     <value>Начать забег</value>
+  </data>
+  <data name="numericUpDown2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>62, 23</value>
+  </data>
+  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 10pt</value>
+  </data>
+  <data name="label4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 19</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>Дистанция:</value>
+  </data>
+  <data name="checkBox1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>117, 19</value>
+  </data>
+  <data name="checkBox1.Text" xml:space="preserve">
+    <value>Бегун сдвинулся</value>
+  </data>
+  <data name="checkBox2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 19</value>
+  </data>
+  <data name="checkBox2.Text" xml:space="preserve">
+    <value>Бегун встретил препятствие</value>
+  </data>
+  <data name="checkBox3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBox3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>141, 19</value>
+  </data>
+  <data name="checkBox3.Text" xml:space="preserve">
+    <value>Бегун финишировал</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>544, 361</value>
