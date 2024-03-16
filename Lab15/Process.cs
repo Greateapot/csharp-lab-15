@@ -50,7 +50,7 @@ namespace Lab15
         {
             for (int i = 0; i < Trace.Distance - 1; i++)
             {
-                Thread.Sleep(MoveDelay);
+                // Thread.Sleep(MoveDelay);
                 lock (Trace.Runners)
                 {
                     Trace.Runners[i, state.Index] = false;
